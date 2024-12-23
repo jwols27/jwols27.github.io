@@ -1,0 +1,203 @@
+:root {
+    --cor1: rebeccapurple;
+    --cor2: mediumpurple;
+    --destaque: plum;
+    --contraste: lavender;
+}
+
+* {
+    font-family: "Ubuntu", sans-serif;
+    box-sizing: border-box;
+    /*font-size: 14px;*/
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    animation: deslizarDiagonal 180s linear infinite;
+    background-repeat: repeat;
+    background-image: url("assets/niko.png");
+    background-size: 5%;
+    background-color: var(--cor1);
+}
+
+.cor-1 {
+    background-color: var(--cor1);
+}
+
+.cor-2 {
+    background-color: var(--cor2);
+}
+
+.flex-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card {
+    background-color: var(--cor2);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 10px var(--cor1);
+}
+
+.banner {
+    margin: auto;
+    padding: 1rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.desenho-serra {
+    filter: drop-shadow(0px 10px 10px var(--cor1));
+    height: 1rem;
+    width: 100%;
+}
+
+.desenho-serra::after {
+    content: "";
+    position: absolute;
+    background: var(--cor2);
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(
+            0% 20%, 1% 100%, 2% 20%, 3% 100%, 4% 20%, 5% 100%,
+            6% 20%, 7% 100%, 8% 20%, 9% 100%, 10% 20%, 11% 100%,
+            12% 20%, 13% 100%, 14% 20%, 15% 100%, 16% 20%, 17% 100%,
+            18% 20%, 19% 100%, 20% 20%, 21% 100%, 22% 20%, 23% 100%,
+            24% 20%, 25% 100%, 26% 20%, 27% 100%, 28% 20%, 29% 100%,
+            30% 20%, 31% 100%, 32% 20%, 33% 100%, 34% 20%, 35% 100%,
+            36% 20%, 37% 100%, 38% 20%, 39% 100%, 40% 20%, 41% 100%,
+            42% 20%, 43% 100%, 44% 20%, 45% 100%, 46% 20%, 47% 100%,
+            48% 20%, 49% 100%, 50% 20%, 51% 100%, 52% 20%, 53% 100%,
+            54% 20%, 55% 100%, 56% 20%, 57% 100%, 58% 20%, 59% 100%,
+            60% 20%, 61% 100%, 62% 20%, 63% 100%, 64% 20%, 65% 100%,
+            66% 20%, 67% 100%, 68% 20%, 69% 100%, 70% 20%, 71% 100%,
+            72% 20%, 73% 100%, 74% 20%, 75% 100%, 76% 20%, 77% 100%,
+            78% 20%, 79% 100%, 80% 20%, 81% 100%, 82% 20%, 83% 100%,
+            84% 20%, 85% 100%, 86% 20%, 87% 100%, 88% 20%, 89% 100%,
+            90% 20%, 91% 100%, 92% 20%, 93% 100%, 94% 20%, 95% 100%,
+            96% 20%, 97% 100%, 98% 20%, 99% 100%, 100% 20%, 100% 0%, 0% 0%
+    );
+}
+
+.blur-edges {
+    background-image: url("assets/PARA.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 200px;
+}
+
+.img-circular {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    margin-bottom: .5rem;
+}
+
+#eu-img {
+    cursor: pointer;
+}
+
+#banner-eu {
+    gap: .3rem;
+    width: 100%;
+    background-color: var(--cor2);
+    padding: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+#conexoes {
+    margin-top: .5rem;
+}
+
+#conexoes a {
+    color: white;
+    text-decoration: none;
+    transition: all 200ms ease;
+    filter: brightness(1.2);
+    display: flex;
+    font-size: 2rem;
+}
+
+#conexoes a:hover {
+    transform: scale(1.05);
+    color: var(--destaque);
+}
+
+#conexoes a:active {
+    filter: brightness(1.3);
+    transform: scale(0.95);
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    background-color: var(--contraste);
+    color: black;
+    text-align: center;
+    padding: .5rem;
+    border-radius: 4px;
+    position: absolute;
+    white-space: nowrap;
+    font-size: .9rem;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(30%);
+    z-index: 3 !important;
+
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.tooltip .tooltip-text::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--contraste) transparent;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+@keyframes deslizarDiagonal {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
