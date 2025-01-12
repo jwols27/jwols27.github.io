@@ -4,6 +4,7 @@
     <title>Testando</title>
     <meta charset="UTF-8"/>
     <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="styles-ids.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
@@ -20,34 +21,67 @@
     />
 
 </head>
-<body class="flex-col">
-<h1>Olá mundo!</h1>
-<div id="banner-eu" class="flex-col">
-    <img id="eu-img" alt="eu" src="assets/PARA.png" class="img-circular" onclick="imagemAleatoria()"/>
-    <b style="font-size: 1.5rem">Júlia Patricia Wolschick</b>
-    <span style="font-size: .9rem"><span id="minha-idade"></span>, Técnica em Informática</span>
-    <span style="font-size: .9rem">Cursando Engenharia de Computação</span>
-    <div id="conexoes" class="flex-row">
-        <a href="https://github.com/jwols27" target="_blank" class="tooltip">
-            <i class="fa-brands fa-github"></i>
-            <span class="tooltip-text">GitHub: jwols27</span>
-        </a>
-        <a href="https://linkedin.com/in/júlia-patricia-wolschick-a22699261" target="_blank" class="tooltip">
-            <i class="fa-brands fa-linkedin"></i>
-            <span class="tooltip-text">LinkedIn</span>
-        </a>
-        <a href="mailto:juliapwols@gmail.com" target="_blank" class="tooltip">
-            <i class="nf nf-md-email"></i>
-            <span class="tooltip-text">juliapwols@gmail.com</span>
-        </a>
-        <a href="https://bsky.app/profile/juwuba27.bsky.social" target="_blank" class="tooltip">
-            <i class="fa-brands fa-bluesky"></i>
-            <span class="tooltip-text">Bluesky: juwuba27</span>
-        </a>
+<body class="fcol scroll-snap">
+<section id="secao-eu" class="fcol">
+    <h1 class="back-title">Olá mundo!</h1>
+    <div id="banner-eu" class="fcol">
+        <img id="eu-img" alt="eu" src="assets/eu.png" class="img-circular" onclick="imagemAleatoria()"/>
+        <b style="font-size: 1.5rem">Júlia Patricia Wolschick</b>
+        <span style="font-size: .9rem"><span id="minha-idade"></span>, Técnica em Informática</span>
+        <span style="font-size: .9rem">Cursando Engenharia de Computação</span>
+        <div id="conexoes" class="frow">
+            <a href="https://github.com/jwols27" target="_blank" class="tooltip">
+                <i class="fa-brands fa-github"></i>
+                <span class="tooltip-text">GitHub: jwols27</span>
+            </a>
+            <a href="https://linkedin.com/in/júlia-patricia-wolschick-a22699261" target="_blank" class="tooltip">
+                <i class="fa-brands fa-linkedin"></i>
+                <span class="tooltip-text">LinkedIn</span>
+            </a>
+            <a href="mailto:juliapwols@gmail.com" target="_blank" class="tooltip">
+                <i class="nf nf-md-email"></i>
+                <span class="tooltip-text">juliapwols@gmail.com</span>
+            </a>
+            <a href="https://bsky.app/profile/juwuba27.bsky.social" target="_blank" class="tooltip">
+                <i class="fa-brands fa-bluesky"></i>
+                <span class="tooltip-text">Bluesky: juwuba27</span>
+            </a>
+        </div>
     </div>
-</div>
-<div class="desenho-serra">
-</div>
+    <div id="desenho"></div>
+</section>
+<section id="secao-2">
+    <h1 class="back-title">Projetos</h1>
+    <div id="unoesc" class="flex card" style="padding: 1.5rem;">
+        <div class="card-img" draggable="false">
+            <img alt="Unoesc" src="assets/logo-unoesc.png"/>
+        </div>
+        <div class="card-text">
+            <b class="card-title">Unoesc ON</b>
+            <p class="card-desc">Trabalhei no aplicativo Unoesc ON (aplicativo oficial da Unoesc) enquanto fazia meu
+                estágio lá.</p>
+            <p class="card-desc">Foi utilizado bastante Flutter, SQL, Node, e React.</p>
+            <a class="card-desc botao-link"
+               href="https://play.google.com/store/apps/details?id=com.unoesc.android.unoescon&pcampaignid=web_share"
+               target="_blank" draggable="false">
+                <i class="nf nf-fa-google_play" style="font-size: 1.1rem; margin-right: .2rem"></i> Dê uma olhada no
+                aplicativo!</a>
+            <div class="grupo-icones">
+                <i class="nf nf-dev-flutter"></i>
+                <i class="nf nf-dev-sqldeveloper"></i>
+                <i class="nf nf-fa-node_js"></i>
+                <i class="nf nf-dev-react"></i>
+                <i class="nf nf-dev-dart"></i>
+            </div>
+        </div>
+    </div>
+
+<!--    <div id="maratona" class="flex card">2</div>-->
+</section>
+<footer class="fcol">
+    <p>© 2025 Júlia Patricia Wolschick.</p>
+    <p>Todos os direitos reservados.</p>
+</footer>
 </body>
 <script src="script.js"></script>
 </html>
