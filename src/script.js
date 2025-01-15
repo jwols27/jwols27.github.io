@@ -20,5 +20,5 @@ const imagemAleatoria = () => {
         imgDisp = imgArr.slice();
     }
 
-    document.getElementById("eu-img").src = `assets/${img}`;
+    document.getElementById("eu-img").src = `src/assets/${img}`;
 }
