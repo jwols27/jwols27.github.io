@@ -27,12 +27,10 @@
 #banner-eu {
     gap: .3rem;
     width: 100%;
-    background: var(--cor2);
-    /*background: radial-gradient(circle, var(--cor2) 0%, var(--cor2-alt) 100%);*/
+    background: rgb(var(--cor2));
     padding: 1rem;
     position: relative;
     z-index: 1;
-    border-radius: 8px 8px 0 0;
 }
 
 @media screen and (max-width: 1000px) {
@@ -64,30 +62,7 @@
     transform: scale(0.95);
 }
 
-#desenho {
-    filter: drop-shadow(0px 10px 10px var(--cor1));
-    height: 1rem;
-    width: 100%;
-}
-
-#desenho::after {
-    content: "";
-    position: absolute;
-    background: var(--cor2);
-
-    height: 100%;
-    width: 100%;
-    clip-path: polygon(
-            7% 100%, 09% 100%, 10% 100%,
-            25% 50%, 27% 100%, 32% 100%,
-            55% 50%, 60% 100%, 70% 80%,
-            76% 20%,
-            85% 65%, 90% 100%,
-            95% 20%, 100% 0%,
-            0% 0%
-    );
-}
-
-#unoesc, #maratona {
+#unoesc, #maratona, #julias-conversion-tool {
 
 }
+

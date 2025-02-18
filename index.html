@@ -5,7 +5,8 @@
     <meta charset="UTF-8"/>
     <link rel="stylesheet" href="src/styles.css"/>
     <link rel="stylesheet" href="src/styles-ids.css"/>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😄</text></svg>">
+    <link rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😄</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
@@ -20,13 +21,12 @@
             rel="stylesheet"
             href="https://www.nerdfonts.com/assets/css/webfont.css"
     />
-
 </head>
 <body class="fcol">
 <main>
-    <section id="secao-eu" class="fcol">
+    <section id="secao-eu" class="fcol center">
         <h1 class="back-title">Olá mundo!</h1>
-        <div id="banner-eu" class="fcol">
+        <div id="banner-eu" class="card fcol center">
             <img id="eu-img" alt="eu" src="src/assets/eu.png" class="img-circular" onclick="imagemAleatoria()"/>
             <b style="font-size: 1.5rem">Júlia Patricia Wolschick</b>
             <span style="font-size: .9rem"><span id="minha-idade"></span>, Técnica em Informática</span>
@@ -52,7 +52,7 @@
         </div>
         <div id="desenho"></div>
     </section>
-    <section id="secao-2">
+    <section id="secao-2" class="fcol">
         <h2 class="back-title">Projetos</h2>
         <article id="unoesc" class="card w-100" style="; margin-top: -2.5rem">
             <div class="card-img" draggable="false">
@@ -68,23 +68,20 @@
                     <i class="nf nf-fa-google_play" style="font-size: 1.1rem; margin-right: .2rem"></i> Dê uma olhada no
                     aplicativo!</a>
                 <div class="grupo-icones">
+                    <i class="nf nf-dev-dart tooltip">
+                        <span class="tooltip-text">Dart</span>
+                    </i>
                     <i class="nf nf-dev-flutter tooltip">
                         <span class="tooltip-text">Flutter</span>
                     </i>
                     <i class="nf nf-dev-sqldeveloper tooltip">
                         <span class="tooltip-text">SQL</span>
                     </i>
-                    <i class="nf nf-fa-node_js tooltip">
-                        <span class="tooltip-text">NodeJs</span>
-
-                    </i>
                     <i class="nf nf-dev-react tooltip">
                         <span class="tooltip-text">React</span>
-
                     </i>
-                    <i class="nf nf-dev-dart tooltip">
-                        <span class="tooltip-text">Dart</span>
-
+                    <i class="nf nf-fa-node_js tooltip">
+                        <span class="tooltip-text">NodeJs</span>
                     </i>
                 </div>
             </div>
@@ -113,9 +110,32 @@
                 <img alt="Maratona SBC" src="src/assets/logo-maratona.png"/>
             </div>
         </article>
+        <article id="julias-conversion-tool" class="card w-100">
+            <div class="card-img" draggable="false">
+                <img alt="Sem imagem" src="src/assets/marcille.png"/>
+            </div>
+            <div class="card-text">
+                <b class="card-title">Júlia's Conversion Tool</b>
+                <p class="card-desc">Uma interface gráfica feita em Flutter para a ferramenta yt-dlp. Disponível para
+                    Windows e Linux</p>
+                <p class="card-desc">Feito com Flutter e yt-dlp.</p>
+                <a href="https://github.com/jwols27/julia_conversion_tool/releases"
+                   class="card-desc botao-link" target="_blank" draggable="false">
+                    <i class="nf nf-dev-github" style="font-size: 1.1rem; margin-right: .2rem"></i> Baixe o aplicativo
+                    aqui!</a>
+                <div class="grupo-icones">
+                    <i class="nf nf-dev-dart tooltip">
+                        <span class="tooltip-text">Dart</span>
+                    </i>
+                    <i class="nf nf-dev-flutter tooltip">
+                        <span class="tooltip-text">Flutter</span>
+                    </i>
+                </div>
+            </div>
+        </article>
     </section>
 </main>
-<footer class="fcol">
+<footer class="fcol center">
     <p>© 2025 Júlia Patricia Wolschick.</p>
     <p>Todos os direitos reservados.</p>
 </footer>

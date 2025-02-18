@@ -1,9 +1,11 @@
 :root {
     --cor1: rebeccapurple;
-    --cor2: mediumpurple;
-    --cor2-alt: rgba(117,87,177,1);
+    --cor2: 147, 112, 219;
+    --cor2-alt: 85, 49, 152;
     --destaque: plum;
     --contraste: lavender;
+    --teste: rgb(85, 49, 152);
+    /*117, 87, 177*/
 }
 
 * {
@@ -25,7 +27,7 @@ body {
     background-image: url("assets/niko.png");
     background-size: 5%;
     background-color: var(--cor1);
-    max-width: 1000px;
+    max-width: 650px;
     margin: auto;
 }
 
@@ -46,23 +48,25 @@ article {
 }
 
 .cor-2 {
-    background-color: var(--cor2);
+    background-color: rgb(var(--cor2));
 }
 
 .fcol {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
 
 .frow {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     gap: 1rem;
+    align-items: center;
+}
+
+.frow.center, .fcol.center {
+    justify-content: center;
 }
 
 .flex {
@@ -147,16 +151,17 @@ article {
 }
 
 .card {
-    background-color: var(--cor2);
-    padding: 0 !important;
+    padding: 0;
     border-radius: 8px;
     box-shadow: 0 10px 10px var(--cor1);
-    border: 2px solid var(--cor2-alt);
+    border: 4px solid rgb(var(--cor2-alt));
     transition: transform 200ms ease;
 
     display: flex;
-    align-items: stretch;
     justify-content: center;
+
+    backdrop-filter: blur(4px);
+    background-color: rgba(var(--cor2), 0.66)
 }
 
 .card:active, .back-title:active {
@@ -169,6 +174,7 @@ article {
     user-select: none;
     height: auto;
     width: 250px;
+    background-color: rgba(var(--cor2), .5)
 }
 
 .card-img img {
@@ -177,25 +183,24 @@ article {
 
 .card-text {
     padding-bottom: 1rem;
-    border-left: 1px solid var(--cor2-alt);
+    border-left: 1px solid rgb(var(--cor2));
     font-size: .9rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
 
 .card-text.rev {
     border-left: 0 !important;
-    border-right: 1px solid var(--cor2-alt);
+    border-right: 1px solid rgb(var(--cor2));
 }
 
 .card-title {
     padding: .75rem;
     font-size: 1.25rem;
-    border-bottom: 1px solid var(--cor2-alt);
+    border-bottom: 1px solid rgb(var(--cor2));
     margin-bottom: .75rem;
 }
 
@@ -247,7 +252,7 @@ footer {
     scroll-snap-align: end;
     height: 3.5rem;
     backdrop-filter: blur(4px);
-    border: 1px solid var(--cor2-alt);
+    border: 1px solid rgb(var(--cor2));
     border-bottom: none;
     font-size: .75rem;
     margin-top: 10vh;
@@ -257,26 +262,46 @@ footer > p {
     margin: .1rem;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 650px) {
     .card.w-100 {
         border-radius: 0;
+    }
+
+    .card {
+        border-width: 4px 0 4px 0;
+    }
+
+    footer {
+        border-width: 1px 0 0 0;
     }
 }
 
 @media screen and (max-width: 500px) {
     .card-text {
-        border-top: 1px solid var(--cor2-alt);
-        border-bottom: 0 !important;
+        border-width: 1px 0 0 0;
+        border-style: solid;
+        border-color: rgb(var(--cor2-alt))
     }
 
     .card-text.rev {
-        border-bottom: 1px solid var(--cor2-alt);
-        border-top: 0 !important;
+        border-width: 0 0 1px 0;
+        border-style: solid;
+        border-color: rgb(var(--cor2-alt))
     }
 
     .card-title, .card-desc, .botao-link {
         text-align: center;
         width: 100%;
+    }
+
+    .card-img {
+        width: 100%;
+        display: flex;
+    }
+
+    .card-img img {
+        width: 200px;
+        margin: auto;
     }
 
     .grupo-icones {
