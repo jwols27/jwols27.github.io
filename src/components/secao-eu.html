@@ -1,9 +1,18 @@
-<h1 class="back-title" data-i18n="ola-mundo">Olá mundo!</h1>
+<div id="ola-mundo">
+    <h1 class="back-title" data-i18n="ola-mundo">Olá mundo!</h1>
+    <a class="tooltip" onclick="mudarLocale()">
+        <span data-i18n="locale"></span>
+        <span class="tooltip-text" data-i18n="locale-change"></span>
+    </a>
+</div>
 <div id="banner-eu" class="card fcol center">
     <img id="eu-img" alt="eu" src="../../src/assets/eu.png" class="img-circular" onclick="imagemAleatoria()"/>
     <b style="font-size: 1.5rem">Júlia Patricia Wolschick</b>
-    <span style="font-size: .9rem"><span id="minha-idade"></span> anos, Técnica em Informática</span>
-    <span style="font-size: .9rem">Cursando Engenharia de Computação</span>
+    <span style="font-size: .9rem">
+      <span id="minha-idade"></span>
+      <span data-i18n="tecnica-ti"></span>
+    </span>
+    <span style="font-size: .9rem" data-i18n="curso"></span>
     <div id="conexoes" class="frow">
         <a href="https://github.com/jwols27" target="_blank" class="tooltip">
             <i class="nf nf-dev-github"></i>

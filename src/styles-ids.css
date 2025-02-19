@@ -1,3 +1,31 @@
+#ola-mundo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#ola-mundo > h1 {
+    padding-right: 0;
+}
+
+#ola-mundo .tooltip-text {
+    top: calc(75%);
+}
+
+#ola-mundo > a {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 200ms ease;
+    user-select: none;
+    backdrop-filter: blur(4px);
+    padding: .5rem;
+    border-radius: 8px;
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
 #secao-eu {
     height: 90vh;
     margin-bottom: 10vh;
@@ -30,7 +58,6 @@
     background: rgb(var(--cor2));
     padding: 1rem;
     position: relative;
-    z-index: 1;
 }
 
 @media screen and (max-width: 1000px) {
