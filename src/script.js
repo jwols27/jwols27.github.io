@@ -1,9 +1,3 @@
-const aniversario = new Date('2003/01/27');
-const idade = (new Date() - aniversario) / (1000 * 60 * 60 * 24 * 365);
-
-document.getElementById("minha-idade").textContent = `${Math.floor(idade)} anos`;
-
-
 const imgArr = [
     "entrapta icon.jpg", "jacko.jpg", "marcille.png", "ramlethal.png", "pretty aqua closeup.png"
 ];
