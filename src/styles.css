@@ -22,10 +22,10 @@ body {
 }
 
 body {
-    animation: deslizarDiagonal 180s linear infinite;
+    animation: deslizarDiagonal 90s linear infinite;
     background-repeat: repeat;
-    background-image: url("assets/niko.png");
-    background-size: 5%;
+    background-image: url("assets/dots.png");
+    background-size: 10%;
     background-color: var(--cor1);
     max-width: 650px;
     margin: auto;
