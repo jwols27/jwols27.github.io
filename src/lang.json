@@ -7,16 +7,17 @@
     "curso": "Cursando Engenharia de Computação",
     "projects": "Projetos",
     "unoesc-desc1": "Trabalhei no aplicativo Unoesc ON (aplicativo oficial da Unoesc) enquanto fazia meu estágio lá.",
-    "unoesc-desc2": "Foi utilizado bastante Flutter, SQL, Node, e React.",
+    "unoesc-desc2": "Foi utilizado bastante Flutter, PostgreSQL, Node, e React.",
     "unoesc-link": " Dê uma olhada no aplicativo!",
     "maratona-titulo": "Website Oficial da Maratona de Programação SBC 2023",
     "maratona-desc1": "Durante meu estágio, fiquei responsável de fazer o site oficial da Maratona de Programação SBC de 2023. Foi uma ótima experiência para mim, consegui aprender bastante nesse período.",
     "maratona-desc2": "Foi utilizado React com TypeScript.",
     "maratona-link": " Acesse o repositório clicando aqui.",
     "jct-desc1": "Uma interface gráfica feita em Flutter para a ferramenta yt-dlp. Disponível para Windows e para Linux.",
-    "jct-desc2": "Feito com Flutter e yt-dlp.",
+    "jct-desc2": "Feito com Flutter e ",
     "jct-link": " Baixe o aplicativo aqui!",
-    "copyright": "Todos os direitos reservados."
+    "copyright": "Todos os direitos reservados.",
+    "feito-com": "Feito com:"
   },
   "en": {
     "ola-mundo": "Hello, world!",
@@ -26,15 +27,16 @@
     "curso": "Studying Computer Engineering",
     "projects": "Projects",
     "unoesc-desc1": "I worked on the Unoesc ON app (my college's official app) while I was doing my internship there.",
-    "unoesc-desc2": "I used mostly Flutter, SQL, NodeJS, and React.",
+    "unoesc-desc2": "I used mostly Flutter, PostgreSQL, NodeJS, and React.",
     "unoesc-link": " Check it out here!",
     "maratona-titulo": "Official website for the 2023 ICPC South America Brazil Finals",
     "maratona-desc1": "During my internship, I was responsible for creating the official website for the 2023 ICPC South America Brazil Finals. It was a great experience for me, I managed to learn a lot during that time period.",
     "maratona-desc2": "React was used along with TypeScript.",
     "maratona-link": " Check out the repo here.",
     "jct-desc1": "Graphical user interface made with Flutter as a wrapper for yt-dlp. Available for Windows and Linux.",
-    "jct-desc2": "Made with Flutter and yt-dlp.",
+    "jct-desc2": "Made with Flutter and ",
     "jct-link": " Download it here!",
-    "copyright": "All rights reserved."
+    "copyright": "All rights reserved.",
+    "feito-com": "Made with:"
   }
 }

@@ -14,31 +14,159 @@
             href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
             rel="stylesheet"
     />
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
     <link
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
             rel="stylesheet"
     />
-    <link
-            rel="stylesheet"
-            href="https://www.nerdfonts.com/assets/css/webfont.css"
-    />
 </head>
 <body class="fcol">
 <main>
-    <section id="secao-eu" class="fcol center"></section>
+    <section id="secao-eu" class="fcol center-xy">
+        <div id="ola-mundo">
+            <h1 class="back-title" data-i18n="ola-mundo">Olá mundo!</h1>
+            <a class="tooltip" onclick="mudarLocale()">
+                <span data-i18n="locale"></span>
+                <span class="tooltip-text" data-i18n="locale-change"></span>
+            </a>
+        </div>
+        <div id="banner-eu" class="card fcol center-xy">
+            <img id="eu-img" alt="eu" src="src/assets/eu.png" class="img-circular" onclick="imagemAleatoria()"/>
+            <b style="font-size: 1.5rem">Júlia Patricia Wolschick</b>
+            <span style="font-size: .9rem">
+      <span id="minha-idade"></span>
+      <span data-i18n="tecnica-ti"></span>
+    </span>
+            <span style="font-size: .9rem" data-i18n="curso"></span>
+            <div id="conexoes" class="frow">
+                <a href="https://github.com/jwols27" target="_blank" class="tooltip" draggable="false">
+                    <i class="devicon-github-original"></i>
+                    <span class="tooltip-text">GitHub: jwols27</span>
+                </a>
+                <a href="https://linkedin.com/in/júlia-patricia-wolschick-a22699261" target="_blank" class="tooltip"
+                   draggable="false">
+                    <i class="devicon-linkedin-plain"></i>
+                    <span class="tooltip-text">LinkedIn</span>
+                </a>
+                <a href="mailto:juliapwols@gmail.com" target="_blank" class="tooltip" draggable="false">
+                    <i class="fa-solid fa-square-envelope"></i>
+                    <span class="tooltip-text">juliapwols@gmail.com</span>
+                </a>
+                <a href="https://bsky.app/profile/juwuba27.bsky.social" target="_blank" class="tooltip"
+                   draggable="false">
+                    <i class="fa-brands fa-bluesky"></i>
+                    <span class="tooltip-text">Bluesky: juwuba27</span>
+                </a>
+            </div>
+        </div>
+    </section>
     <section id="secao-2" class="fcol">
         <h2 class="back-title" data-i18n="projects"></h2>
-        <article id="unoesc" class="card w-100" style="margin-top: -2.5rem"></article>
-        <article id="maratona" class="card w-100"></article>
-        <article id="julias-conversion-tool" class="card w-100"></article>
+        <article id="unoesc" class="card w-100" style="margin-top: -2.5rem">
+            <div class="card-img">
+                <img alt="Unoesc" src="src/assets/logo-unoesc.png" draggable="false"/>
+            </div>
+            <div class="card-text">
+                <b class="card-title">Unoesc ON</b>
+                <p class="card-desc" data-i18n="unoesc-desc1"></p>
+                <p class="card-desc" data-i18n="unoesc-desc2"></p>
+                <a href="https://play.google.com/store/apps/details?id=com.unoesc.android.unoescon&pcampaignid=web_share"
+                   class="card-desc botao-link" target="_blank" draggable="false">
+                    <i class="fa-brands fa-google-play" style="font-size: 1.15rem; margin-right: .2rem"></i>
+                    <span data-i18n="unoesc-link"></span>
+                </a>
+                <div class="grupo-icones">
+                    <i class="devicon-dart-plain tooltip">
+                        <span class="tooltip-text">Dart</span>
+                    </i>
+                    <i class="devicon-flutter-plain tooltip">
+                        <span class="tooltip-text">Flutter</span>
+                    </i>
+                    <i class="devicon-typescript-plain tooltip">
+                        <span class="tooltip-text">TypeScript</span>
+                    </i>
+                    <i class="devicon-react-original tooltip">
+                        <span class="tooltip-text">React</span>
+                    </i>
+                    <i class="devicon-nodejs-plain tooltip">
+                        <span class="tooltip-text">NodeJs</span>
+                    </i>
+                    <i class="devicon-postgresql-plain tooltip">
+                        <span class="tooltip-text">PostgreSQL</span>
+                    </i>
+                </div>
+            </div>
+        </article>
+        <article id="maratona" class="card w-100">
+            <div class="card-text rev">
+                <b class="card-title" data-i18n="maratona-titulo"></b>
+                <p class="card-desc" data-i18n="maratona-desc1"></p>
+                <p class="card-desc" data-i18n="maratona-desc2"></p>
+                <a href="https://github.com/jwols27/web-maratona-2023"
+                   class="card-desc botao-link" target="_blank" draggable="false">
+                    <i class="devicon-github-original" style="font-size: 1.25rem; margin-right: .2rem"></i>
+                    <span data-i18n="maratona-link"></span>
+                </a>
+                <div class="grupo-icones">
+                    <i class="devicon-typescript-plain tooltip">
+                        <span class="tooltip-text">TypeScript</span>
+                    </i>
+                    <i class="devicon-react-original tooltip">
+                        <span class="tooltip-text">React</span>
+                    </i>
+                </div>
+            </div>
+            <div class="card-img" draggable="false">
+                <img alt="Maratona SBC" src="src/assets/logo-maratona.png" draggable="false"/>
+            </div>
+        </article>
+        <article id="julias-conversion-tool" class="card w-100">
+            <div class="card-img" draggable="false">
+                <img alt="Sem imagem" src="src/assets/marcille.png" draggable="false"/>
+            </div>
+            <div class="card-text">
+                <b class="card-title">Júlia's Conversion Tool</b>
+                <p class="card-desc" data-i18n="jct-desc1"></p>
+                <p class="card-desc">
+                    <span data-i18n="jct-desc2"></span>
+                    <a href="https://github.com/yt-dlp/yt-dlp" target="_blank">yt-dlp</a>
+                </p>
+                <a href="https://github.com/jwols27/julia_conversion_tool/releases"
+                   class="card-desc botao-link" target="_blank" draggable="false">
+                    <i class="devicon-github-original" style="font-size: 1.25rem; margin-right: .2rem"></i><span
+                        data-i18n="jct-link"></span></a>
+                <div class="grupo-icones">
+                    <i class="devicon-dart-plain tooltip">
+                        <span class="tooltip-text">Dart</span>
+                    </i>
+                    <i class="devicon-flutter-plain tooltip">
+                        <span class="tooltip-text">Flutter</span>
+                    </i>
+                </div>
+            </div>
+        </article>
     </section>
 </main>
-<footer class="fcol center">
-    <p>© 2025 Júlia Patricia Wolschick.</p>
-    <p data-i18n="copyright">Todos os direitos reservados.</p>
+<footer class="frow center-xy">
+    <div>
+        <p>© 2025 Júlia Patricia Wolschick.</p>
+        <p data-i18n="copyright"></p>
+    </div>
+    <div class="frow align-center">
+        <p data-i18n="feito-com"></p>
+        <div id="footer-icones" class="grupo-icones">
+            <i class="devicon-html5-plain colored tooltip tooltip-inverted">
+                <span class="tooltip-text">HTML</span>
+            </i>
+            <i class="devicon-css3-plain colored tooltip tooltip-inverted">
+                <span class="tooltip-text">CSS</span>
+            </i>
+            <i class="devicon-javascript-plain colored tooltip tooltip-inverted" style="margin-left: .2rem">
+                <span class="tooltip-text">JavaScript</span>
+            </i>
+        </div>
+    </div>
 </footer>
 </body>
 <script src="src/script.js"></script>
-<script src="src/loader.js"></script>
-<script src="src/localization.js"></script>
 </html>

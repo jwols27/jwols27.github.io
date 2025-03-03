@@ -2,27 +2,27 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-}
 
-#ola-mundo > h1 {
-    padding-right: 0;
-}
+    & > h1 {
+        padding-right: 0;
+    }
 
-#ola-mundo .tooltip-text {
-    top: calc(75%);
-}
+    & .tooltip-text {
+        top: calc(75%);
+    }
 
-#ola-mundo > a {
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: all 200ms ease;
-    user-select: none;
-    backdrop-filter: blur(4px);
-    padding: .5rem;
-    border-radius: 8px;
+    & > a {
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: all 200ms ease;
+        user-select: none;
+        backdrop-filter: blur(4px);
+        padding: .5rem;
+        border-radius: 8px;
 
-    &:active {
-        transform: scale(0.95);
+        &:active {
+            transform: scale(0.95);
+        }
     }
 }
 
@@ -30,6 +30,15 @@
     height: 90vh;
     margin-bottom: 10vh;
     width: 100%;
+    text-align: center;
+}
+
+#banner-eu {
+    gap: .3rem;
+    width: 100%;
+    background: rgb(var(--cor2));
+    padding: 1rem;
+    position: relative;
 }
 
 #secao-2 {
@@ -46,18 +55,10 @@
     margin-top: .5rem;
     box-shadow: 0 0 10px var(--cor1);
     transition: all 200ms ease;
-}
 
-#eu-img:active {
-    transform: scale(0.95);
-}
-
-#banner-eu {
-    gap: .3rem;
-    width: 100%;
-    background: rgb(var(--cor2));
-    padding: 1rem;
-    position: relative;
+    &:active {
+        transform: scale(0.95);
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -71,25 +72,28 @@
 }
 
 #conexoes a {
-    color: var(--contraste);
+    color: white;
     text-decoration: none;
     transition: all 200ms ease;
-    filter: brightness(1.2);
     display: flex;
     font-size: 2rem;
+
+    &:hover {
+        transform: scale(1.05);
+        color: var(--destaque);
+        filter: brightness(1.2);
+    }
+
+    &:active {
+        filter: brightness(1.3);
+        transform: scale(0.95);
+    }
 }
 
-#conexoes a:hover {
-    transform: scale(1.05);
-    color: var(--destaque);
+#footer-icones.grupo-icones {
+    display: flex;
+    padding: 0;
+    gap: .5rem;
+    font-size: 1.5rem;
+    margin-top: 0.1rem;
 }
-
-#conexoes a:active {
-    filter: brightness(1.3);
-    transform: scale(0.95);
-}
-
-#unoesc, #maratona, #julias-conversion-tool {
-
-}
-
